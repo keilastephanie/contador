@@ -2,12 +2,12 @@ import java.util.Scanner;
 
 public class Contador {
     static class ParametrosInvalidosException extends Exception {
+       
         public ParametrosInvalidosException(String mensagem) {
             super(mensagem);
         }
     }
-	private static String mensagem;
-    public static void main(String[] args) {
+	public static void main(String[] args) {
 		try (Scanner terminal = new Scanner(System.in)) {
             System.out.println("Digite o primeiro parâmetro");
             int parametroUm = terminal.nextInt();
@@ -32,7 +32,6 @@ public class Contador {
 
         }
 		 System.out.println("contagem entre" + parametroUm + "e" + parametroDois + ":");
-		int contagem = parametroDois - parametroUm;
 		//realizar o for para imprimir os números com base na variável contagem
         for(int i = parametroUm; i <= parametroDois; i++){
             System.out.println(i);
